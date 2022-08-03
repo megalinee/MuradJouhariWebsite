@@ -1,11 +1,74 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+@import url('https://fonts.googleapis.com/css?family=Andale+Mono');
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One');
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+@import url('https://fonts.googleapis.com/css?family=Goldman');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
 
 .logo {
     font-family: "Rubik Mono One";
     color:white;
 }
 
+.aboutme{
+    font-family: "Shrikhand";
+    color: "#640D14";
+}
+
+.expmkr{
+    font-family: "Goldman";
+}
+
+.iama{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+br {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -5vh /* change this to whatever height you want it */
+}
+
+.FIRST{
+    font-family: "Arimo";
+}
+
+.aspdev{
+    font-family: "Yeseva One";
+}
+
+.team{
+    font-family: "Bowlby One SC";
+}
+
+.vector{
+    font-family: "Bungee";
+}
+
+.jbox{
+    font-family: "Bree Serif";
+}
+
+.outline-black{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.outline-white{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
 .sphere{
     font-family: "Courier New";
     color:white;
+}
+
+.box {
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
 }

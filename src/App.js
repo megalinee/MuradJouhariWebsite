@@ -1,15 +1,181 @@
-import React, { Component } from 'react';
-import { Container, Row, Col, Button, Navbar } from 'react-bootstrap'
+import React from 'react';
+import AOS from 'aos';
+import { Canvas } from "react-three-fiber"
+import { Container, Card, Navbar, Button, Ratio, Nav, Image, Grid, Row, Col } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './fonts.css';
+import 'aos/dist/aos.css';
+
+// Custom Components
+import ScalingText from './components/ScalingText';
+import Spacer from './components/Spacer';
+import Gradient from './components/Gradient';
+import AboutMeSphere from './components/AboutMeSphere';
+
+// Images
+import portrait from './images/Portrait.jpg'
+import sphere from './images/sphere.png'
+import vector from './images/vector.png'
+import mouse from './images/spousemouse.png'
+import jbox from './images/JBox.png'
+
+AOS.init();
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () { AOS.refresh(); }, 500);
+});
 
 function App() {
   return (
-    // style={{ backgroundImage: "linear-gradient(#0f0f0f, #333333)" }}
     <>
-      <Container fluid align="center" style={{ backgroundImage: "linear-gradient(#0f0f0f, #333333)" }}>
-        <Navbar.Text className="logo" style={{ fontSize: "calc(40px + 1.5vw)" }} >Megaline</Navbar.Text>
+      {/*TITLE*/}
+      <Container fluid style={{ backgroundColor: "#80475E" }}>
+        <Navbar expand="">
+          <Navbar.Text className="logo" style={{ color: "#EDDFEF" }}>
+            <div style={{ width: "70vw" }}>
+              <ScalingText size="30px" scale=".5vw">Murad Jouhari</ScalingText>
+            </div>
+          </Navbar.Text>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              navbarScroll
+            >
+              <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#aboutme">About Me</Nav.Link>
+              <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#experiencemaker">Experiece Maker</Nav.Link>
+              <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#teamplayer">Team Player</Nav.Link>
+              <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#aspiringdev">Aspiring Developer</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </Container >
 
+      {/*ABOUT ME*/}
+      <Container id="aboutme" fluid style={{ backgroundColor: "#AD2831", width: "100%", marginBottom: "-30vh" }}>
+        <Spacer size="2vh"></Spacer>
+        <div data-aos-duration="500" data-aos="fade-in" style={{ position: "relative", top: "0px", height: "30vh" }}>
+          <Canvas >
+            <ambientLight intensity={0.5}></ambientLight>
+            <directionalLight position={[-2, 5, 2]} intensity={1} />
+            <AboutMeSphere></AboutMeSphere>
+          </Canvas>
+        </div>
+        <div style={{ position: "relative", top: "-32vh" }} >
+          <div data-aos-duration="500" data-aos="fade-in" align="center" style={{ color: "#F79D65" }}>
+            <ScalingText size="0px" className="aboutme" scale="13vh">
+              ABOUT
+              <br></br>
+              ME
+            </ScalingText>
+          </div>
+          <Row>
+            <Col xs={12} md={6}>
+              <Image data-aos-duration="500" data-aos="fade-in" style={{ backgroundColor: "#F79D65", overflow: "hidden", height: "auto", width: "100%" }} src={portrait} rounded></Image>
+            </Col>
+            <Col xs={0} md={6}>
+              <ScalingText size="40px" className="logo" scale="4vw">
+                <div align="left" data-aos-duration="700" data-aos="fade-left" style={{ color: "#9aa383" }}>
+                  HELLO,
+                </div>
+              </ScalingText>
+              <ScalingText size="10px" className="logo" scale="1vw">
+                <div align="left" data-aos-duration="1000" data-aos="fade-left" style={{ color: "#B4C292" }}>
+                  Sint Lorem dolore amet ipsum amet irure proident exercitation ipsum ea minim duis. Nostrud sit non consectetur veniam ipsum proident duis ad et incididunt aliquip minim do. Quis qui et ut id ex et qui eiusmod ut exercitation mollit quis labore esse.
+                </div>
+              </ScalingText>
+            </Col>
+          </Row>
+        </div>
+        <Spacer size="2vh"></Spacer>
+      </Container>
+
+      {/*EXPERIENCE MAKER*/}
+      <Container id="experiencemaker" fluid align="center" style={{ backgroundColor: "#030027" }}>
+
+        <Spacer size="3vh"></Spacer>
+        <ScalingText size="50px" className="iama" scale="4vw">
+          <div data-aos-duration="1000" data-aos="fade-in" style={{ color: "#87BAAB" }}>
+            I AM A
+          </div>
+        </ScalingText>
+        <Spacer size="3vh"></Spacer>
+        <div data-aos="fade-up" data-aos-duration="1000" style={{ color: "#E0BAD7" }}>
+          <ScalingText size="40px" className="expmkr" scale="1.5vw">
+            EXPERIENCE MAKER
+          </ScalingText>
+        </div>
+        <Card data-aos="flip-up" data-aos-duration="2000" className="bg-dark text-white text-center d-flex align-items-center justify-content-center" style={{ width: "calc(200px + 35vw)" }}>
+          <Card.Img src={sphere} height="vw" alt="Sphere" />
+          <Card.ImgOverlay>
+            <Card.Title className="align-text-left sphere"><ScalingText size="40px" scale="5vw">SPHERE</ScalingText></Card.Title>
+            <Card.Text><ScalingText size="15px" scale="2vw">Music Visualizer</ScalingText></Card.Text>
+            <Button variant="dark">Visit the website!</Button>
+          </Card.ImgOverlay>
+        </Card>
+        <Spacer size="10vh"></Spacer>
+      </Container >
+
+      <Gradient colors="#030027, #0C1618"><Spacer size="10vh"></Spacer></Gradient>
+      {/*TEAM PLAYER*/}
+      <Container id="teamplayer" fluid align="center" style={{ backgroundColor: "#0C1618" }}>
+        <Spacer size="5vh"></Spacer>
+        <div data-aos="fade-up" style={{ color: "#CAFFD0" }}><ScalingText size="40px" className="team" scale="1.5vw">TEAM PLAYER</ScalingText></div>
+        <Card data-aos="flip-up" data-aos-duration="2000" className="bg-dark text-white " style={{ width: "calc(200px + 35vw)" }}>
+          <Card.Img src={vector} height="vw" alt="Sphere" />
+          <Card.ImgOverlay>
+            <Card.Subtitle className="outline-black vector" style={{ color: "#db7500" }}><ScalingText size="25px" scale="4vw">
+              Vector 8177
+            </ScalingText></Card.Subtitle>
+            <Card.Text className="FIRST outline-black" style={{ color: "white", fontWeight: "200" }}><ScalingText size="20px" scale="3vw">
+              Lead Programmer
+            </ScalingText></Card.Text>
+            <Button variant="dark">Learn more about the FIRST Robotics Competition!</Button>
+          </Card.ImgOverlay>
+        </Card>
+        <Spacer size="5vh"></Spacer>
+        <div style={{ width: "calc(220px + 35vw)", height: 'auto' }}>
+          <Ratio aspectRatio="16x9">
+            <iframe data-aos="zoom-in-up" class="embed-responsive-item" src="https://www.youtube.com/embed/exc4-yaS0zI" title="2022 Pasadena #2 Recap | Team 8177 Vector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </Ratio>
+        </div>
+        <Spacer size="10vh"></Spacer>
+      </Container >
+
+      <Gradient colors="#0C1618, #754043"><Spacer size="10vh"></Spacer></Gradient>
+      {/*ASPIRING DEVELOPER*/}
+      <Container id="aspiringdev" fluid align="center" style={{ backgroundColor: "#754043" }}>
+        <div data-aos="fade-up" style={{ color: "#BCA371" }}><ScalingText size="40px" className="aspdev" scale="1.5vw">& ASPIRING DEVELOPER</ScalingText></div>
+        <Card data-aos="flip-up" data-aos-duration="2000" className="bg-dark text-white text-center d-flex align-items-center justify-content-center" style={{ width: "calc(200px + 35vw)" }}>
+          <Card.Img src={mouse} height="vw" alt="Sphere" />
+          <Card.ImgOverlay>
+            <Card.Title className="align-text-left"><ScalingText size="30px" scale="1.5vw">Spousemouse</ScalingText></Card.Title>
+            <div className="box" style={{ color: "white" }}>
+              <Card.Text>
+                A Node.js Powered CLI Program To Send Messages Through Mice Movement
+              </Card.Text>
+            </div>
+            <Spacer size="1vh"></Spacer>
+            <Button variant="dark">Visit the GitHub page!</Button>
+          </Card.ImgOverlay>
+        </Card>
+
+        <Spacer size="5vh"></Spacer>
+
+        <Card data-aos="flip-up" data-aos-duration="2000" className="bg-dark text-white text-center d-flex align-items-center justify-content-center" style={{ width: "calc(200px + 35vw)" }}>
+          <Card.Img src={jbox} height="vw" alt="Sphere" />
+          <Card.ImgOverlay>
+            <Card.Title style={{ color: "#FF7C99" }} className="align-text-left jbox"><ScalingText size="10px" scale="15vw">JBOX</ScalingText></Card.Title>
+            <div className="FIRST" style={{ color: "#741B47" }}>
+              <Card.Text>
+                A Jackbox inspired party game built completely in Java with LAN network integration
+              </Card.Text>
+            </div>
+            <Spacer size="1vh"></Spacer>
+            <Button variant="dark">Visit the itch.io page!</Button>
+          </Card.ImgOverlay>
+        </Card>
+        <Spacer size="10vh"></Spacer>
       </Container >
     </>
   );
