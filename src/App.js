@@ -71,7 +71,7 @@ function App() {
           </div>
           <Row>
             <Col xs={12} md={6}>
-              <Image data-aos-duration="500" data-aos="fade-in" style={{ backgroundColor: "#F79D65", overflow: "hidden", height: "auto", width: "100%" }} src={portrait} rounded></Image>
+              <Image data-aos-duration="500" data-aos="fade-in" style={{ backgroundColor: "#F79D65", height: "auto", width: "100%" }} src={portrait} rounded></Image>
             </Col>
             <Col xs={0} md={6}>
               <ScalingText size="40px" className="logo" scale="4vw">
@@ -79,9 +79,12 @@ function App() {
                   HELLO,
                 </div>
               </ScalingText>
-              <ScalingText size="10px" className="logo" scale="1vw">
+              <ScalingText size="15px" className="readableText" scale="1vw">
                 <div align="left" data-aos-duration="1000" data-aos="fade-left" style={{ color: "#B4C292" }}>
-                  Sint Lorem dolore amet ipsum amet irure proident exercitation ipsum ea minim duis. Nostrud sit non consectetur veniam ipsum proident duis ad et incididunt aliquip minim do. Quis qui et ut id ex et qui eiusmod ut exercitation mollit quis labore esse.
+                  I'm Murad. I currently attend Tomball Memorial High School as a senior, where I partake in Computer Science UIL.
+                  My goal is to graduate college with a Computer Science degree and help find breakthroughs in the emerging field of Machine Learning.
+                  I enjoy spending my free time playing with my cats, riding around on my bike, and <a style={{ textDecoration: 'none', color: "#6d7558" }} href="https://music.apple.com/profile/mjouhari" target="_blank">listening to music. </a>
+                  There's so much to learn about everything, a lot of the time I have no idea where to start.
                 </div>
               </ScalingText>
             </Col>
@@ -110,7 +113,7 @@ function App() {
           <Card.ImgOverlay>
             <Card.Title className="align-text-left sphere"><ScalingText size="40px" scale="5vw">SPHERE</ScalingText></Card.Title>
             <Card.Text><ScalingText size="15px" scale="2vw">Music Visualizer</ScalingText></Card.Text>
-            <Button variant="dark">Visit the website!</Button>
+            <Button target="_blank" variant="dark" href="https://megaline.dev/sphere/">Visit the website!</Button>
           </Card.ImgOverlay>
         </Card>
         <Spacer size="10vh"></Spacer>
@@ -130,7 +133,7 @@ function App() {
             <Card.Text className="FIRST outline-black" style={{ color: "white", fontWeight: "200" }}><ScalingText size="20px" scale="3vw">
               Lead Programmer
             </ScalingText></Card.Text>
-            <Button variant="dark">Learn more about the FIRST Robotics Competition!</Button>
+            <Button target="_blank" variant="dark" href="https://www.vector8177.com/">Learn more about the FIRST Robotics Competition!</Button>
           </Card.ImgOverlay>
         </Card>
         <Spacer size="5vh"></Spacer>
@@ -156,7 +159,7 @@ function App() {
               </Card.Text>
             </div>
             <Spacer size="1vh"></Spacer>
-            <Button variant="dark">Visit the GitHub page!</Button>
+            <Button target="_blank" variant="dark" href="https://github.com/megalinee/Spousemouse">Visit the GitHub page!</Button>
           </Card.ImgOverlay>
         </Card>
 
@@ -172,7 +175,7 @@ function App() {
               </Card.Text>
             </div>
             <Spacer size="1vh"></Spacer>
-            <Button variant="dark">Visit the itch.io page!</Button>
+            <Button target="_blank" variant="dark" href="https://megalinegg.itch.io/jbox">Visit the itch.io page!</Button>
           </Card.ImgOverlay>
         </Card>
         <Spacer size="10vh"></Spacer>
