@@ -1,6 +1,7 @@
 import React from 'react';
 import AOS from 'aos';
 import { Canvas } from "react-three-fiber"
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 import { Container, Card, Button, Ratio, Image, Row, Col } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './fonts.css';
@@ -20,6 +21,7 @@ import mouse from './images/spousemouse.png'
 import jbox from './images/JBox.png'
 import LogoBar from './components/LogoBar';
 import FooterBar from './components/FooterBar';
+import ToggleElement from './components/ToggleElement';
 
 AOS.init();
 
@@ -27,9 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () { AOS.refresh(); }, 500);
 });
 
+
 function App() {
   return (
     <>
+
       {/*TITLE*/}
       <LogoBar />
 
@@ -51,9 +55,9 @@ function App() {
               ME
             </ScalingText>
           </div>
-          <Row>
+          <Row style={{ display: "flex", alignItems: "center" }}>
             <Col xs={12} md={6}>
-              <Image className="shadow-lg" data-aos-duration="500" data-aos="fade-in" style={{ backgroundColor: "#F79D65", height: "auto", width: "100%" }} src={portrait} rounded></Image>
+              <Image align="center" className="shadow-lg" data-aos-duration="500" data-aos="fade-in" style={{ backgroundColor: "#F79D65", height: "auto", width: "100%" }} src={portrait} rounded></Image>
             </Col>
             <Col xs={0} md={6}>
               <ScalingText size="40px" className="logo" scale="4vw">
@@ -71,8 +75,9 @@ function App() {
               </ScalingText>
             </Col>
           </Row>
+
+          <Spacer size="2vh"></Spacer>
         </div>
-        <Spacer size="2vh"></Spacer>
       </Container>
 
       {/*EXPERIENCE MAKER*/}
@@ -118,13 +123,15 @@ function App() {
             <Button style={{ marginTop: "0px" }} target="_blank" variant="dark" href="https://www.vector8177.com/">Learn more about the FIRST Robotics Competition!</Button>
           </Card.ImgOverlay>
         </Card>
-        <Spacer size="5vh"></Spacer>
-        <div style={{ width: "calc(200px + 35vw)", height: 'auto' }}>
-          <Ratio aspectRatio="16x9">
-            <iframe className="shadow" data-aos="zoom-in-up" class="embed-responsive-item" src="https://www.youtube.com/embed/exc4-yaS0zI" title="2022 Pasadena #2 Recap | Team 8177 Vector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </Ratio>
-        </div>
-        <Spacer size="10vh"></Spacer>
+        <Spacer size="2vh"></Spacer>
+        <ToggleElement>
+          <div onchange="AOS.reload()" style={{ width: "calc(200px + 35vw)", height: 'auto' }}>
+            <Ratio aspectRatio="16x9">
+              <iframe className="shadow" data-aos="zoom-in-up" class="embed-responsive-item" src="https://www.youtube.com/embed/exc4-yaS0zI" title="2022 Pasadena #2 Recap | Team 8177 Vector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </Ratio>
+          </div>
+        </ToggleElement>
+        <Spacer size="2vh"></Spacer>
       </Container >
 
       <Gradient colors="#0C1618, #754043"><Spacer size="10vh"></Spacer></Gradient>

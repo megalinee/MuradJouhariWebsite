@@ -14,8 +14,8 @@ export default class FooterBar extends Component {
                             <ScalingText size="14px" scale=".5vw">© 2022 Murad Jouhari</ScalingText>
                         </div>
                     </Navbar.Text>
-                    <MDBBtn target="_blank" className='' tag='a' color='none' style={{ color: "#BBC5AA", paddingLeft: "0px" }} href='https://instagram.com/murad_is_kewl/'>
-                        <MDBIcon fab className='fa-3x' icon='instagram' />
+                    <MDBBtn target="_blank" className='' tag='a' color='none' style={{ paddingLeft: "0px" }} href='https://instagram.com/murad_is_kewl/'>
+                        <MDBIcon style={{ color: "#BBC5AA" }} fab className='fa-3x' icon='instagram' />
                     </MDBBtn>
 
                 </Navbar>
