@@ -1,7 +1,7 @@
 import React from 'react';
 import AOS from 'aos';
 import { Canvas } from "react-three-fiber"
-import { Container, Card, Navbar, Button, Ratio, Nav, Image, Grid, Row, Col } from 'react-bootstrap'
+import { Container, Card, Button, Ratio, Image, Row, Col } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './fonts.css';
 import 'aos/dist/aos.css';
@@ -18,6 +18,8 @@ import sphere from './images/sphere.png'
 import vector from './images/vector.png'
 import mouse from './images/spousemouse.png'
 import jbox from './images/JBox.png'
+import LogoBar from './components/LogoBar';
+import FooterBar from './components/FooterBar';
 
 AOS.init();
 
@@ -29,30 +31,10 @@ function App() {
   return (
     <>
       {/*TITLE*/}
-      <Container fluid style={{ backgroundColor: "#80475E" }}>
-        <Navbar expand="">
-          <Navbar.Text className="logo" style={{ color: "#EDDFEF" }}>
-            <div style={{ width: "70vw" }}>
-              <ScalingText size="30px" scale=".5vw">Murad Jouhari</ScalingText>
-            </div>
-          </Navbar.Text>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              navbarScroll
-            >
-              <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#aboutme">About Me</Nav.Link>
-              <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#experiencemaker">Experiece Maker</Nav.Link>
-              <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#teamplayer">Team Player</Nav.Link>
-              <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#aspiringdev">Aspiring Developer</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </Container >
+      <LogoBar />
 
       {/*ABOUT ME*/}
-      <Container id="aboutme" fluid style={{ backgroundColor: "#AD2831", width: "100%", marginBottom: "-30vh" }}>
+      <Container id="aboutme" fluid style={{ backgroundColor: "#AD2831", width: "100%", marginBottom: "-30vh", overflow: "hidden" }}>
         <Spacer size="2vh"></Spacer>
         <div data-aos-duration="500" data-aos="fade-in" style={{ position: "relative", top: "0px", height: "30vh" }}>
           <Canvas >
@@ -71,7 +53,7 @@ function App() {
           </div>
           <Row>
             <Col xs={12} md={6}>
-              <Image data-aos-duration="500" data-aos="fade-in" style={{ backgroundColor: "#F79D65", height: "auto", width: "100%" }} src={portrait} rounded></Image>
+              <Image className="shadow-lg" data-aos-duration="500" data-aos="fade-in" style={{ backgroundColor: "#F79D65", height: "auto", width: "100%" }} src={portrait} rounded></Image>
             </Col>
             <Col xs={0} md={6}>
               <ScalingText size="40px" className="logo" scale="4vw">
@@ -109,7 +91,7 @@ function App() {
           </ScalingText>
         </div>
         <Card data-aos="flip-up" data-aos-duration="2000" className="bg-dark text-white text-center d-flex align-items-center justify-content-center" style={{ width: "calc(200px + 35vw)" }}>
-          <Card.Img src={sphere} height="vw" alt="Sphere" />
+          <Card.Img className="shadow-lg" src={sphere} height="vw" alt="Sphere" />
           <Card.ImgOverlay>
             <Card.Title className="align-text-left sphere"><ScalingText size="40px" scale="5vw">SPHERE</ScalingText></Card.Title>
             <Card.Text><ScalingText size="15px" scale="2vw">Music Visualizer</ScalingText></Card.Text>
@@ -125,21 +107,21 @@ function App() {
         <Spacer size="5vh"></Spacer>
         <div data-aos="fade-up" style={{ color: "#CAFFD0" }}><ScalingText size="40px" className="team" scale="1.5vw">TEAM PLAYER</ScalingText></div>
         <Card data-aos="flip-up" data-aos-duration="2000" className="bg-dark text-white " style={{ width: "calc(200px + 35vw)" }}>
-          <Card.Img src={vector} height="vw" alt="Sphere" />
+          <Card.Img className="shadow" src={vector} height="vw" alt="Sphere" />
           <Card.ImgOverlay>
-            <Card.Subtitle className="outline-black vector" style={{ color: "#db7500" }}><ScalingText size="25px" scale="4vw">
+            <Card.Subtitle className="outline-black vector" style={{ color: "#db7500", marginTop: "calc(5vh - 20px)" }}><ScalingText size="25px" scale="4vw">
               Vector 8177
             </ScalingText></Card.Subtitle>
-            <Card.Text className="FIRST outline-black" style={{ color: "white", fontWeight: "200" }}><ScalingText size="20px" scale="3vw">
+            <Card.Text className="logo outline-black" style={{ color: "#FEEFDD", fontWeight: "200", marginBottom: "0px" }}><ScalingText size="15px" scale="3vw">
               Lead Programmer
             </ScalingText></Card.Text>
-            <Button target="_blank" variant="dark" href="https://www.vector8177.com/">Learn more about the FIRST Robotics Competition!</Button>
+            <Button style={{ marginTop: "0px" }} target="_blank" variant="dark" href="https://www.vector8177.com/">Learn more about the FIRST Robotics Competition!</Button>
           </Card.ImgOverlay>
         </Card>
         <Spacer size="5vh"></Spacer>
-        <div style={{ width: "calc(220px + 35vw)", height: 'auto' }}>
+        <div style={{ width: "calc(200px + 35vw)", height: 'auto' }}>
           <Ratio aspectRatio="16x9">
-            <iframe data-aos="zoom-in-up" class="embed-responsive-item" src="https://www.youtube.com/embed/exc4-yaS0zI" title="2022 Pasadena #2 Recap | Team 8177 Vector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe className="shadow" data-aos="zoom-in-up" class="embed-responsive-item" src="https://www.youtube.com/embed/exc4-yaS0zI" title="2022 Pasadena #2 Recap | Team 8177 Vector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </Ratio>
         </div>
         <Spacer size="10vh"></Spacer>
@@ -147,10 +129,10 @@ function App() {
 
       <Gradient colors="#0C1618, #754043"><Spacer size="10vh"></Spacer></Gradient>
       {/*ASPIRING DEVELOPER*/}
-      <Container id="aspiringdev" fluid align="center" style={{ backgroundColor: "#754043" }}>
+      <Container id="aspiringdev" fluid align="center" style={{ backgroundColor: "#754043", overflow: "hidden" }}>
         <div data-aos="fade-up" style={{ color: "#BCA371" }}><ScalingText size="40px" className="aspdev" scale="1.5vw">& ASPIRING DEVELOPER</ScalingText></div>
         <Card data-aos="flip-up" data-aos-duration="2000" className="bg-dark text-white text-center d-flex align-items-center justify-content-center" style={{ width: "calc(200px + 35vw)" }}>
-          <Card.Img src={mouse} height="vw" alt="Sphere" />
+          <Card.Img className="shadow-lg" src={mouse} height="vw" alt="Sphere" />
           <Card.ImgOverlay>
             <Card.Title className="align-text-left"><ScalingText size="30px" scale="1.5vw">Spousemouse</ScalingText></Card.Title>
             <div className="box" style={{ color: "white" }}>
@@ -166,7 +148,7 @@ function App() {
         <Spacer size="5vh"></Spacer>
 
         <Card data-aos="flip-up" data-aos-duration="2000" className="bg-dark text-white text-center d-flex align-items-center justify-content-center" style={{ width: "calc(200px + 35vw)" }}>
-          <Card.Img src={jbox} height="vw" alt="Sphere" />
+          <Card.Img className="shadow-lg" src={jbox} height="vw" alt="Sphere" />
           <Card.ImgOverlay>
             <Card.Title style={{ color: "#FF7C99" }} className="align-text-left jbox"><ScalingText size="10px" scale="15vw">JBOX</ScalingText></Card.Title>
             <div className="FIRST" style={{ color: "#741B47" }}>
@@ -178,8 +160,11 @@ function App() {
             <Button target="_blank" variant="dark" href="https://megalinegg.itch.io/jbox">Visit the itch.io page!</Button>
           </Card.ImgOverlay>
         </Card>
-        <Spacer size="10vh"></Spacer>
+        <Spacer size="5vh"></Spacer>
       </Container >
+
+      {/*FOOTER*/}
+      <FooterBar />
     </>
   );
 }

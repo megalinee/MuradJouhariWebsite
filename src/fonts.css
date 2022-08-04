@@ -62,7 +62,11 @@ br {
     font-family: "Bree Serif";
 }
 
-
+.outline-black {
+    /* Prefix required. Even Firefox only supports the -webkit- prefix */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
 
 .sphere{
     font-family: "Courier New";
