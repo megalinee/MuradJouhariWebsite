@@ -19,7 +19,7 @@ export default class LogoBar extends Component {
                             navbarScroll
                         >
                             <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#aboutme">About Me</Nav.Link>
-                            <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#experiencemaker">Experiece Maker</Nav.Link>
+                            <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#experiencemaker">Experience Maker</Nav.Link>
                             <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#teamplayer">Team Player</Nav.Link>
                             <Nav.Link className="logo" style={{ color: "#cdc0cf" }} href="#aspiringdev">Aspiring Developer</Nav.Link>
                         </Nav>

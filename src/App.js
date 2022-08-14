@@ -1,7 +1,6 @@
 import React from 'react';
 import AOS from 'aos';
 import { Canvas } from "react-three-fiber"
-import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 import { Container, Card, Button, Ratio, Image, Row, Col } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './fonts.css';
@@ -69,7 +68,7 @@ function App() {
                 <div align="left" data-aos-duration="1000" data-aos="fade-left" style={{ color: "#B4C292" }}>
                   I'm Murad. I currently attend Tomball Memorial High School as a senior, where I partake in Computer Science UIL.
                   My goal is to graduate college with a Computer Science degree and help find breakthroughs in the emerging field of Machine Learning.
-                  I enjoy spending my free time playing with my cats, riding around on my bike, and <a style={{ textDecoration: 'none', color: "#6d7558" }} href="https://music.apple.com/profile/mjouhari" target="_blank">listening to music. </a>
+                  I enjoy spending my free time playing with my cats, riding around on my bike, and <a style={{ textDecoration: 'none', color: "#6d7558" }} href="https://music.apple.com/profile/mjouhari" target="_blank" rel="noreferrer" >listening to music. </a>
                   There's so much to learn about everything, a lot of the time I have no idea where to start.
                 </div>
               </ScalingText>
@@ -86,7 +85,7 @@ function App() {
         <Spacer size="3vh"></Spacer>
         <ScalingText size="50px" className="iama" scale="4vw">
           <div data-aos-duration="1000" data-aos="fade-in" style={{ color: "#87BAAB" }}>
-            I AM A
+            I AM AN
           </div>
         </ScalingText>
         <Spacer size="3vh"></Spacer>
@@ -100,7 +99,7 @@ function App() {
           <Card.ImgOverlay>
             <Card.Title className="align-text-left sphere"><ScalingText size="40px" scale="5vw">SPHERE</ScalingText></Card.Title>
             <Card.Text><ScalingText size="15px" scale="2vw">Music Visualizer</ScalingText></Card.Text>
-            <Button target="_blank" variant="dark" href="https://megaline.dev/sphere/">Visit the website!</Button>
+            <Button target="_blank" rel="noreferrer" variant="dark" href="https://megaline.dev/sphere/">Visit the website!</Button>
           </Card.ImgOverlay>
         </Card>
         <Spacer size="10vh"></Spacer>
@@ -120,11 +119,11 @@ function App() {
             <Card.Text className="logo outline-black" style={{ color: "#FEEFDD", fontWeight: "200", marginBottom: "0px" }}><ScalingText size="15px" scale="3vw">
               Lead Programmer
             </ScalingText></Card.Text>
-            <Button style={{ marginTop: "0px" }} target="_blank" variant="dark" href="https://www.vector8177.com/">Learn more about the FIRST Robotics Competition!</Button>
+            <Button style={{ marginTop: "0px" }} target="_blank" rel="noreferrer" variant="dark" href="https://www.vector8177.com/">Learn more about the FIRST Robotics Competition!</Button>
           </Card.ImgOverlay>
         </Card>
         <Spacer size="2vh"></Spacer>
-        <ToggleElement>
+        <ToggleElement dataaos="zoom-in-up" >
           <div onchange="AOS.reload()" style={{ width: "calc(200px + 35vw)", height: 'auto' }}>
             <Ratio aspectRatio="16x9">
               <iframe className="shadow" data-aos="zoom-in-up" class="embed-responsive-item" src="https://www.youtube.com/embed/exc4-yaS0zI" title="2022 Pasadena #2 Recap | Team 8177 Vector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -148,7 +147,7 @@ function App() {
               </Card.Text>
             </div>
             <Spacer size="1vh"></Spacer>
-            <Button target="_blank" variant="dark" href="https://github.com/megalinee/Spousemouse">Visit the GitHub page!</Button>
+            <Button target="_blank" rel="noreferrer" variant="dark" href="https://github.com/megalinee/Spousemouse">Visit the GitHub page!</Button>
           </Card.ImgOverlay>
         </Card>
 
@@ -164,7 +163,7 @@ function App() {
               </Card.Text>
             </div>
             <Spacer size="1vh"></Spacer>
-            <Button target="_blank" variant="dark" href="https://megalinegg.itch.io/jbox">Visit the itch.io page!</Button>
+            <Button target="_blank" rel="noreferrer" variant="dark" href="https://megalinegg.itch.io/jbox">Visit the itch.io page!</Button>
           </Card.ImgOverlay>
         </Card>
         <Spacer size="5vh"></Spacer>

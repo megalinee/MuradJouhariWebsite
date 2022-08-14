@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Container, Navbar } from 'react-bootstrap'
 import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 
 import ScalingText from './ScalingText';

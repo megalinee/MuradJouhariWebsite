@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBIcon } from 'mdb-react-ui-kit';
 const onStatetoggle = "chevron-up"
 const offStatetoggle = "chevron-down"
 
@@ -26,7 +26,7 @@ export default class ToggleElement extends Component {
             <>
                 {this.state.toggle ? this.props.children : ""}
                 <div align="center">
-                    <button style={{ backgroundColor: "transparent", borderColor: "transparent" }} type="button" onClick={() => { this.flipState() }}>
+                    <button data-aos={this.props.dataaos} style={{ backgroundColor: "transparent", borderColor: "transparent" }} type="button" onClick={() => { this.flipState() }}>
                         <MDBIcon style={{ color: "#BBC5AA" }} className='fa-3x' icon={this.getImage(this.state.toggle)} />
                     </button>
                 </div>
