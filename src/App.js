@@ -48,7 +48,7 @@ function App() {
         </div>
         <div style={{ position: "relative", top: "-32vh" }} >
           <div data-aos-duration="500" data-aos="fade-in" align="center" style={{ color: "#F79D65" }}>
-            <ScalingText size="0px" className="aboutme" scale="13vh">
+            <ScalingText size="0px" className="aboutme" scale="12vh">
               ABOUT
               <br></br>
               ME
