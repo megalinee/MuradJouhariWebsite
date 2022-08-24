@@ -6,7 +6,7 @@ export default class AboutMeSphere extends Component {
         return (
             <Sphere visible args={[1, 100, 200]} scale={1.5}>
                 <MeshDistortMaterial
-                    color="#932F6D"
+                    color="#FF8552"
                     attach="material"
                     distort={1}
                     speed={1.5}
