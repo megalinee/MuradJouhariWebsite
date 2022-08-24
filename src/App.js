@@ -16,7 +16,6 @@ import AboutMeSphere from './components/AboutMeSphere';
 import portrait from './images/Portrait.jpg'
 import sphere from './images/sphere.png'
 import vector from './images/vector.png'
-import mouse from './images/spousemouse.png'
 import attendance from './images/qrcodeattendance.png'
 import jbox from './images/JBox.png'
 import LogoBar from './components/LogoBar';
