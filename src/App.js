@@ -37,7 +37,7 @@ function App() {
       <LogoBar />
 
       {/*ABOUT ME*/}
-      <Container id="aboutme" fluid style={{ backgroundColor: "#AD2831", width: "100%", marginBottom: "-30vh", overflow: "hidden" }}>
+      <Container id="aboutme" fluid style={{ backgroundColor: "#582C4D", width: "100%", marginBottom: "-30vh", overflow: "hidden" }}>
         <Spacer size="2vh"></Spacer>
         <div data-aos-duration="500" data-aos="fade-in" style={{ position: "relative", top: "0px", height: "30vh" }}>
           <Canvas >
@@ -47,7 +47,7 @@ function App() {
           </Canvas>
         </div>
         <div style={{ position: "relative", top: "-32vh" }} >
-          <div data-aos-duration="500" data-aos="fade-in" align="center" style={{ color: "#F79D65" }}>
+          <div data-aos-duration="500" data-aos="fade-in" align="center" style={{ color: "#D9B8C4" }}>
             <ScalingText size="0px" className="aboutme" scale="12vh">
               ABOUT
               <br></br>
@@ -60,12 +60,12 @@ function App() {
             </Col>
             <Col xs={0} md={6}>
               <ScalingText size="40px" className="logo" scale="4vw">
-                <div align="left" data-aos-duration="700" data-aos="fade-left" style={{ color: "#9aa383" }}>
+                <div align="left" data-aos-duration="700" data-aos="fade-left" style={{ color: "#a7ba91" }}>
                   HELLO,
                 </div>
               </ScalingText>
               <ScalingText size="15px" className="readableText" scale="1vw">
-                <div align="left" data-aos-duration="1000" data-aos="fade-left" style={{ color: "#B4C292" }}>
+                <div align="left" data-aos-duration="1000" data-aos="fade-left" style={{ color: "#849472" }}>
                   I'm Murad. I currently attend Tomball Memorial High School as a senior, where I partake in Computer Science UIL.
                   My goal is to graduate college with a Computer Science degree and help find breakthroughs in the emerging field of Machine Learning.
                   I enjoy spending my free time playing with my cats, riding around on my bike, and <a style={{ textDecoration: 'none', color: "#6d7558" }} href="https://music.apple.com/profile/mjouhari" target="_blank" rel="noreferrer" >listening to music. </a>
