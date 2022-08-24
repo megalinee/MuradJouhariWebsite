@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
 @import url('https://fonts.googleapis.com/css?family=Goldman');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .logo {
@@ -30,6 +31,10 @@ a:active, a:focus {
 
 .readableText{
     font-family: 'Lato', sans-serif;
+}
+
+.qrcode{
+    font-family: "Righteous";
 }
 
 .iama{

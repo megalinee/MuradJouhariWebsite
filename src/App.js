@@ -17,6 +17,7 @@ import portrait from './images/Portrait.jpg'
 import sphere from './images/sphere.png'
 import vector from './images/vector.png'
 import mouse from './images/spousemouse.png'
+import attendance from './images/qrcodeattendance.png'
 import jbox from './images/JBox.png'
 import LogoBar from './components/LogoBar';
 import FooterBar from './components/FooterBar';
@@ -138,16 +139,18 @@ function App() {
       <Container id="aspiringdev" fluid align="center" style={{ backgroundColor: "#754043", overflow: "hidden" }}>
         <div data-aos="fade-up" style={{ color: "#BCA371" }}><ScalingText size="40px" className="aspdev" scale="1.5vw">& ASPIRING DEVELOPER</ScalingText></div>
         <Card data-aos="flip-up" data-aos-duration="2000" className="bg-dark text-white text-center d-flex align-items-center justify-content-center" style={{ width: "calc(200px + 35vw)" }}>
-          <Card.Img className="shadow-lg" src={mouse} height="vw" alt="Sphere" />
+          <Card.Img className="shadow-lg" src={attendance} height="vw" alt="Sphere" />
           <Card.ImgOverlay>
-            <Card.Title className="align-text-left"><ScalingText size="30px" scale="1.5vw">Spousemouse</ScalingText></Card.Title>
-            <div className="box" style={{ color: "white" }}>
-              <Card.Text>
-                A Node.js Powered CLI Program To Send Messages Through Mice Movement
-              </Card.Text>
+            <Spacer size=".5vw"></Spacer>
+            <Card.Title style={{ color: "#ffbfbf" }} className="align-text-left outline-black qrcode"><ScalingText size="30px" scale="3vw">QR Code Attendance</ScalingText></Card.Title>
+            <div className="" style={{ color: "white" }}>
+              <Spacer size="1vw"></Spacer>
+              <Card.Text className="box" style={{ color: "white" }}><ScalingText size="5px" scale="1vw">
+                An attendance tracker that utilizies live QR & Barcode detection. Built in Python.
+              </ScalingText></Card.Text>
             </div>
-            <Spacer size="1vh"></Spacer>
-            <Button target="_blank" rel="noreferrer" variant="dark" href="https://github.com/megalinee/Spousemouse">Visit the GitHub page!</Button>
+            <Spacer size="2vw"></Spacer>
+            <Button target="_blank" rel="noreferrer" variant="dark" href="https://github.com/megalinee/QRCodeAttendance">Visit the GitHub page!</Button>
           </Card.ImgOverlay>
         </Card>
 
