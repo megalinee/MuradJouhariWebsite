@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { MDBIcon } from 'mdb-react-ui-kit';
-const onStatetoggle = "chevron-up"
-const offStatetoggle = "chevron-down"
+import { Collapse } from '@mui/material';
+import { motion } from "framer-motion"
 
 export default class ToggleElement extends Component {
     constructor(props) {
@@ -9,10 +9,6 @@ export default class ToggleElement extends Component {
         this.state = {
             toggle: false
         }
-    }
-
-    getImage(toggleState) {
-        return toggleState ? onStatetoggle : offStatetoggle
     }
 
     flipState() {
@@ -24,12 +20,16 @@ export default class ToggleElement extends Component {
     render() {
         return (
             <>
-                {this.state.toggle ? this.props.children : ""}
-                <div align="center">
-                    <button data-aos={this.props.dataaos} style={{ backgroundColor: "transparent", borderColor: "transparent" }} type="button" onClick={() => { this.flipState() }}>
-                        <MDBIcon style={{ color: "#BBC5AA" }} className='fa-3x' icon={this.getImage(this.state.toggle)} />
-                    </button>
+                <div>
+                    <Collapse in={this.state.toggle}>
+                        {this.props.children}
+                    </Collapse>
                 </div>
+                <motion.div align="center" animate={{ rotate: this.state.toggle ? 180 : 0 }}>
+                    <button data-aos={this.props.dataaos} style={{ backgroundColor: "transparent", borderColor: "transparent" }} type="button" onClick={() => { this.flipState() }}>
+                        <MDBIcon style={{ color: "#BBC5AA" }} className='fa-3x' icon={"chevron-down"} />
+                    </button>
+                </motion.div>
             </>
         )
     }
