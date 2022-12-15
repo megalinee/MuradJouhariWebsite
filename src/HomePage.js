@@ -141,11 +141,11 @@ function HomePage() {
                     <Card.Img className="shadow-lg" src={attendance} height="vw" alt="Sphere" />
                     <Card.ImgOverlay>
                         <Spacer size=".5vw"></Spacer>
-                        <Card.Title style={{ color: "#ffbfbf" }} className="align-text-left outline-black qrcode"><ScalingText size="30px" scale="3vw">QR Code Attendance</ScalingText></Card.Title>
+                        <Card.Title style={{ color: "#2ea1ff" }} className="align-text-left outline-black qrcode"><ScalingText size="30px" scale="4vw">QR Code Attendance</ScalingText></Card.Title>
                         <div className="" style={{ color: "white" }}>
                             <Spacer size="1vw"></Spacer>
-                            <Card.Text className="box" style={{ color: "white" }}><ScalingText size="5px" scale="1vw">
-                                An attendance tracker that utilizies live QR & Barcode detection. Built in Python.
+                            <Card.Text style={{ color: "white" }}><ScalingText size="5px" scale="1vw">
+                                An attendance tracker that utilizies live QR & Barcode detection.
                             </ScalingText></Card.Text>
                         </div>
                         <Spacer size="2vw"></Spacer>
