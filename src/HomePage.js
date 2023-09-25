@@ -66,10 +66,10 @@ function HomePage() {
                             </ScalingText>
                             <ScalingText size="15px" className="readableText" scale="1vw">
                                 <div align="left" data-aos-duration="1000" data-aos="fade-left" style={{ color: "#E6E6E6" }}>
-                                    I'm Murad. I currently attend Tomball Memorial High School as a senior, where I partake in Computer Science UIL.
+                                    I'm Murad. I recently graduated from Tomball Memorial High School, now going to Dallas College.
                                     My goal is to graduate college with a Computer Science degree and help find breakthroughs in the emerging field of Machine Learning.
                                     I enjoy spending my free time playing with my cats, riding around on my bike, and <a style={{ textDecoration: 'none', color: "#FF8552" }} href="https://music.apple.com/profile/mjouhari" target="_blank" rel="noreferrer" >listening to music. </a>
-                                    There's so much to learn about everything, a lot of the time I have no idea where to start.
+                                    There's so much to learn about everything, I'm excited to see what the world has to offer :))
                                 </div>
                             </ScalingText>
                         </Col>
